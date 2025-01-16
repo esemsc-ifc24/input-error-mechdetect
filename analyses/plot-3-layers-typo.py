@@ -6,13 +6,13 @@ import matplotlib.pyplot as plt
 # Define paths
 typo_dir = 'results_all-layers/text-sentences_typo/'
 clean_dir = 'results_all-layers/text-sentences_clean/'
-output_dir = 'analyses/plots/'
+output_dir = 'analyses/plots/3-layers'
 
 # Create output directory if it doesn't exist
 os.makedirs(output_dir, exist_ok=True)
 
 # Number of lines to plot
-num_lines = 50
+num_lines = 3
 
 # Iterate through layers
 for layer_file in sorted(os.listdir(typo_dir)):

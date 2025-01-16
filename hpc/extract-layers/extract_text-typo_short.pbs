@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -N extract_text-typo_short
+#PBS -l select=1:ncpus=2:ngpus=1:mem=4gb
+#PBS -l walltime=03:00:00
+#PBS -o logs/extract_text-typo_short.out
+#PBS -e logs/extract_text-typo_short.err
+
+cd $PBS_O_WORKDIR
+
+singularity exec containers/extract_activations.sif python3 scripts/extract-layers/extract_text-typo_short.py

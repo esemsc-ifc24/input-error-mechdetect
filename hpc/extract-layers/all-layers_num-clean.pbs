@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -N all-layers_num-clean
+#PBS -l select=1:ncpus=2:ngpus=1:mem=4gb
+#PBS -l walltime=03:00:00
+#PBS -o logs/all-layers_num-clean.out
+#PBS -e logs/all-layers_num-clean.err
+
+cd $PBS_O_WORKDIR
+
+singularity exec containers/extract_activations.sif python3 scripts/extract-layers/all-layers_num-clean.py
